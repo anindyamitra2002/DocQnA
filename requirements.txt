@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-ollama
+langchain-chroma>=0.1.2
+sentence-transformers
+pypdf
+chromadb
