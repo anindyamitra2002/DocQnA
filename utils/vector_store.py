@@ -1,4 +1,3 @@
-# utils/vector_store.py
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_chroma import Chroma
 from uuid import uuid4

@@ -1,7 +1,6 @@
 import streamlit as st
 from utils.rag_system import initialize_llm, process_documents, get_answer
 from utils.config import Config
-import json
 
 def initialize_session_state():
     """Initialize session state variables if they don't exist"""
@@ -30,19 +29,15 @@ def process_documents_if_needed(uploaded_files, model_name, temperature, k_value
 
     current_files = {f.name for f in uploaded_files}
     
-    # Check if we need to process new documents
     if has_new_documents(uploaded_files):
         with st.spinner("Processing new documents..."):
             try:
-                # Initialize LLM
                 llm = initialize_llm(model_name, temperature)
                 st.session_state.llm = llm
 
-                # Process all documents (including previously processed ones)
                 retriever = process_documents(uploaded_files, k_value)
                 st.session_state.retriever = retriever
 
-                # Update processed files set
                 st.session_state.processed_files = current_files
                 
                 st.success(f"Processed {len(current_files)} documents successfully!")
@@ -55,10 +50,8 @@ def process_documents_if_needed(uploaded_files, model_name, temperature, k_value
 def main():
     st.title("RAG System with Dynamic Document Processing")
     
-    # Initialize session state
     initialize_session_state()
 
-    # Sidebar for configuration and document upload
     with st.sidebar:
         st.header("Configuration")
         model_name = st.selectbox(
@@ -96,21 +89,17 @@ def main():
                 st.warning("New documents detected! They will be processed when you send your next message.")
                 st.session_state.document_processing_needed = True
 
-        # Add a button to clear chat history
         if st.button("Clear Chat History"):
             st.session_state.messages = []
             st.rerun()
 
-    # Display chat messages
     chat_container = st.container()
     with chat_container:
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-    # Handle user input
     if prompt := st.chat_input("Enter your query here"):
-        # Process any new documents before handling the query
         if st.session_state.document_processing_needed:
             success = process_documents_if_needed(uploaded_files, model_name, temperature, k_value)
             if success:
@@ -119,12 +108,10 @@ def main():
                 st.error("Failed to process new documents. Please try uploading them again.")
                 return
 
-        # Add user message to chat
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        # Generate and display response
         if not uploaded_files:
             st.error("Please upload some documents first.")
         elif not hasattr(st.session_state, 'retriever') or st.session_state.retriever is None:
