@@ -134,7 +134,7 @@ def reset_session():
     st.rerun()
 
 def main():
-    st.title("RAG System with Dynamic Document Processing")
+    st.title("DocQnA with Ollama")
     
     initialize_session_state()
 
