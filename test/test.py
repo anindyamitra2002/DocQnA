@@ -41,7 +41,7 @@ def test_rag_system():
         logger.info("Starting RAG system test")
 
         # Test configuration
-        test_pdf_path = "DocQnA/sample/goog-10-k-2023 (1).pdf"  # Put your PDF in the same directory as test.py
+        test_pdf_path = "./sample/goog-10-k-2023 (1).pdf"  # Put your PDF in the same directory as test.py
         test_query = "What is the total revenue for Google Search?"  # Replace with your test query
 
         logger.info(f"Using test PDF: {test_pdf_path}")

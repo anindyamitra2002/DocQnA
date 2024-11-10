@@ -9,6 +9,7 @@ This RAG system is especially useful for contexts where domain-specific knowledg
 ## Content
 
 - [System Workflow](#system-workflow)
+- [Script Descriptions](#script-descriptions)
 - [Tech Stack](#tech-stack)
 - [Ollama Installation](#ollama-installation)
 - [Usage](#usage)
@@ -29,6 +30,16 @@ This RAG system is especially useful for contexts where domain-specific knowledg
 4. **Question-Answering**:
    - The user inputs a query, which is processed through a retrieval chain.
    - Relevant document chunks are retrieved and fed into an Ollama-based LLM for contextual answers.
+
+## Script Descriptions
+
+- **`app.py`**: The main application file that initializes the RAG system and manages user interactions, serving as the entry point for deploying the retrieval-augmented generation interface.
+- **`document_processor.py`**: Handles loading and splitting of PDF documents into manageable chunks for efficient retrieval.
+- **`vector_store.py`**: Creates and maintains the vector store, supporting document embedding and retrieval operations.
+- **`rag_system.py`**: Initializes the language model and orchestrates the generation of responses based on retrieved document data.
+- **`config.py`**: Contains configuration settings, such as model parameters and retrieval options, essential for customizing the RAG system.
+- **`test.py`**: A dedicated test script that debug the RAG pipeline, including document processing, vector storage, retrieval setup, and answer generation. It also keeps track in the log file.
+
 
 ## Tech Stack
 
