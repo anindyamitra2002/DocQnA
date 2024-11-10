@@ -15,6 +15,7 @@ def create_vector_store(documents, model_name="BAAI/bge-small-en"):
         persist_directory="./chroma_langchain_db"
     )
     uuids = [str(uuid4()) for _ in range(len(documents))]
+    print("creating embedding vector")
     vector_store.add_documents(documents=documents, ids=uuids)
     return vector_store
 
