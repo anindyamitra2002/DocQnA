@@ -33,37 +33,32 @@ EMBEDDING_MODELS = {
     "Multilingual E5 Large (1024d)": "intfloat/multilingual-e5-large",
     "Jina Embeddings v2 Base EN (768d)": "jinaai/jina-embeddings-v2-base-en",
     "MXBAi Embed Large v1 (1024d)": "mixedbread-ai/mxbai-embed-large-v1",
-    "E5 Mistral 7B Instruct (1024d)": "intfloat/e5-mistral-7b-instruct",
+    "E5 Mistral 7B Instruct (4096d)": "intfloat/e5-mistral-7b-instruct",
     "Jina Embeddings v3 (768d)": "jinaai/jina-embeddings-v3",
     
     # Medium-Sized Models
     "BGE Base English v1.5 (768d)": "BAAI/bge-base-en-v1.5",
     "BCE Embedding Base v1 (768d)": "maidalun1020/bce-embedding-base_v1",
-    "BGE Reranker Large (768d)": "BAAI/bge-reranker-large",
+    "BGE Reranker Large (1024d)": "BAAI/bge-reranker-large",
     "BGE Small English v1.5 (384d)": "BAAI/bge-small-en-v1.5",
-    "SFR Embedding Mistral (768d)": "Salesforce/SFR-Embedding-Mistral",
+    "SFR Embedding Mistral (4096d)": "Salesforce/SFR-Embedding-Mistral",
     
-    # Specialized Models
-    "MiniCPM Embedding (768d)": "openbmb/MiniCPM-Embedding",
     "Multilingual E5 Large Instruct (1024d)": "intfloat/multilingual-e5-large-instruct",
-    "Jina CLIP v1 (512d)": "jinaai/jina-clip-v1",
     "UAE Large V1 (1024d)": "WhereIsAI/UAE-Large-V1",
-    "NV Embed v2 (768d)": "nvidia/NV-Embed-v2",
     
     # Multilingual Models
     "Jina Embeddings v2 Base ZH (768d)": "jinaai/jina-embeddings-v2-base-zh",
     "Jina Embeddings v2 Base DE (768d)": "jinaai/jina-embeddings-v2-base-de",
     
     # Lightweight Models
-    "Jina Embeddings v2 Small EN (384d)": "jinaai/jina-embeddings-v2-small-en",
+    "Jina Embeddings v2 Small EN (512d)": "jinaai/jina-embeddings-v2-small-en",
     "BGE Small EN (384d)": "BAAI/bge-small-en",
     "GTE Small (384d)": "Supabase/gte-small",
     
     # Legacy Models but Still Used
     "all-MiniLM-L6-v2 (384d)": "sentence-transformers/all-MiniLM-L6-v2",
     "all-mpnet-base-v2 (768d)": "sentence-transformers/all-mpnet-base-v2",
-    "e5-large-v2 (1024d)": "intfloat/e5-large-v2",
-    "instructor-large (768d)": "hkunlp/instructor-large"
+    "e5-large-v2 (1024d)": "intfloat/e5-large-v2"
 }
 
 def initialize_session_state():
