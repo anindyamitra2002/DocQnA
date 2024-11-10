@@ -13,10 +13,10 @@ def initialize_llm(model_name="llama3", temperature=0.8, num_predict=256):
         num_predict=num_predict
     )
 
-def process_documents(pdf_files, k):
-    documents = load_and_split_pdfs(pdf_files)
-    vector_store = create_vector_store(documents)
-    retriever = get_retriever(vector_store, k=k)
+def process_documents(uploaded_files, k_value, chunk_length, chunk_overlap, embedding_model_id, embed_device):
+    documents = load_and_split_pdfs(uploaded_files, chunk_length, chunk_overlap)
+    vector_store = create_vector_store(documents, embedding_model_id, embed_device)
+    retriever = get_retriever(vector_store, k=k_value)
     return retriever
 
 

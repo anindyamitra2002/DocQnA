@@ -2,10 +2,10 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_chroma import Chroma
 from uuid import uuid4
 
-def create_vector_store(documents, model_name="BAAI/bge-small-en"):
+def create_vector_store(documents, model_name="BAAI/bge-small-en", embed_device='cpu'):
     embedding_model = HuggingFaceBgeEmbeddings(
         model_name=model_name,
-        model_kwargs={'device': 'cpu'},
+        model_kwargs={'device': embed_device},
         encode_kwargs={'normalize_embeddings': True}
     )
     vector_store = Chroma(
