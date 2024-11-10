@@ -8,8 +8,6 @@ This RAG system is especially useful for contexts where domain-specific knowledg
 
 ## Content
 
-- [Overview](#overview)
-- [Content](#content)
 - [System Workflow](#system-workflow)
 - [Tech Stack](#tech-stack)
 - [Ollama Installation](#ollama-installation)
@@ -84,19 +82,19 @@ To run the RAG system:
   
 ## Future Work
 
-**Improving Retrieval Accuracy:**  Incorporate hybrid search and dynamic indexing to improve retrieval precision and ensure real-time data relevance.
+- **Improving Retrieval Accuracy:**  Incorporate hybrid search and dynamic indexing to improve retrieval precision and ensure real-time data relevance.
 
-**Contextual Understanding:**  Use contextual embeddings and chunk sequencing to enhance the relevance and coherence of retrieved information.
+- **Contextual Understanding:**  Use contextual embeddings and chunk sequencing to enhance the relevance and coherence of retrieved information.
 
-**Handling Complex Queries:**  Enable multi-document reasoning and filtering techniques to manage complex queries and reduce irrelevant data distractions.
+- **Handling Complex Queries:**  Enable multi-document reasoning and filtering techniques to manage complex queries and reduce irrelevant data distractions.
 
-**Evaluation Frameworks:**  Develop robust evaluation metrics and establish benchmarks to measure and compare system performance effectively.
+- **Evaluation Frameworks:**  Develop robust evaluation metrics and establish benchmarks to measure and compare system performance effectively.
 
-**User Interaction and Feedback Loops:**  Integrate interactive learning and feedback mechanisms to refine responses based on user interactions over time.
+- **User Interaction and Feedback Loops:**  Integrate interactive learning and feedback mechanisms to refine responses based on user interactions over time.
 
-**Agentic RAG:**  Add agentic capabilities to autonomously determine retrieval based on user intent, improving response relevance.
+- **Agentic RAG:**  Add agentic capabilities to autonomously determine retrieval based on user intent, improving response relevance.
 
-**Graph RAG:**  Utilize graph-based structures to map data relationships, enhancing retrieval by connecting related information.
+- **Graph RAG:**  Utilize graph-based structures to map data relationships, enhancing retrieval by connecting related information.
 
 ## Conclusion
 
