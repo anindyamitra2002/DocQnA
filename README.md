@@ -19,6 +19,10 @@ This RAG system is especially useful for contexts where domain-specific knowledg
 
 ## System Workflow
 
+<div align="center">
+  <img src="https://huggingface.co/datasets/huggingface/cookbook-images/resolve/main/RAG_workflow.png" alt="RAG Workflow" width="600">
+</div>
+
 1. **Upload Documents**: Users upload PDF documents via Streamlit, which checks for any new documents and flags them for processing.
 2. **Document Processing**:
    - Documents are loaded, split into chunks using LangChain's `RecursiveCharacterTextSplitter`.
